@@ -1,27 +1,17 @@
-from flask import Flask , render_template
+from flask import Flask 
 
 app = Flask(__name__) 
 
-posts = [
-    {
-        'author': 'Rakchiga' ,
-        'title': 'app budget' 
-    },
-    {
-        'author' : 'kaushal' ,
-        'title':  'app budget 2'
-    }
-]
+
 
 @app.route("/")
-@app.route("/Budgeting app")
 
 def home():
-    return render_template('home.html', posts=posts)
+    return "Hello BudgetAi"
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return "About page"
 
 
 if __name__ == '__main__':
