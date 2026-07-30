@@ -8,8 +8,52 @@
     <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css')}}">
 </head>
 <body>
-    <h1>BudgetFlow 🤍</h1>
-    <p></p>
+    <div class = "container">
+    <nav class=" sidebar" > 
+    <h2>BudgetFlow 🤍</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Activity</li>
+            <li>Savings</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+
+     </nav>
+     <main class = "main-content">
+        <header class = "navbar">
+            <h1>Dashboard</h1>
+            <div class = "navbar-right">
+                <input type = "search" placeholder="Search.. ">
+                <span>🔔</span>
+                <span> 👤</span>
+            </div>
+        </header>
+        <section class = "dashboard">
+            <h2>Welcome Back </h2>
+            <p> Here's your financial overview, </p>
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Total Balance</h3>
+                    <p>£0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Income</h3>
+                    <p>£0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Expenses</h3>
+                    <p>£0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Monthly Budget</h3>
+                    <p>£0.00</p>
+                </div>
+            </div>
+        </section>
+    
+     </main>
+      </div>
     <script src = "{{ url_for('static' , filename='js/script.js')}}"></script>
 </body>
 </html>
