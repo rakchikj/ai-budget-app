@@ -32,9 +32,6 @@ body{
     transition: color 0.3s ease;
 
 }
-.sidebar li:hover{
-    color:#9ec5ff;
-}
 .sidebar ul {
     list-style: none;
     margin-top: 20px;
@@ -92,4 +89,48 @@ body{
     font-size: 28px;
     font-weight: bold;
     margin-top: 10px;
+}
+.sidebar a {
+    color:white;
+    text-decoration:none;
+    display: block;
+}
+.sidebar a:hover{
+    color:9ec5ff;
+}
+.income-form{
+    background: white;
+    max-width: 600px;
+    margin: top 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08 );
+}
+.income-form label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight:bold;
+
+}
+.income-form input,
+.income-form textarea{
+    width: 100 px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: inherit;
+}
+.income-form textarea{
+    height: 100px; 
+    padding: 12px 20px;
+    border:none;
+    border-radius: 10px;
+    background: #172c5e;
+    color: white;
+    cursor: pointer;
+}
+
+.imcome-form button:hover {
+    background: #294785;
 }
