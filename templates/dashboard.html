@@ -38,7 +38,7 @@
             <div class="summary-cards">
                 <div class="card">
                     <h3>Total Balance</h3>
-                    <p>£{{ "%.2f" |format(income|sum(attribute="amount")) }}</p>
+                    <p>£{{ "%.2f" |format((income|sum(attribute="amount")) - (expenses|sum(attribute="amount")))}}</p>
                 </div>
                 <div class="card">
                     <h3>Income</h3>
