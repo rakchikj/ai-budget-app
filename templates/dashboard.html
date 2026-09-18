@@ -14,7 +14,7 @@
         <ul>
             <li><a href= "/">Dashboard</a></li>
             <li><a href="/add-income">Add Income</a></li>
-            <li><a href= "#">Add Expenses</a></li>
+            <li><a href= "/add-expense">Add Expenses</a></li>
             <li><a href= "/">Transactions</a></li>
             <li><a href= "/">Budgets</a></li>
             <li><a href= "#">Savings</a></li>
@@ -38,15 +38,15 @@
             <div class="summary-cards">
                 <div class="card">
                     <h3>Total Balance</h3>
-                    <p>£0.00</p>
+                    <p>£{{ "%.2f" |format(income|sum(attribute="amount")) }}</p>
                 </div>
                 <div class="card">
                     <h3>Income</h3>
-                    <p>£0.00</p>
+                    <p>£{{ "%.2f" |format(income|sum(attribute="amount")) }}</p>
                 </div>
                 <div class="card">
                     <h3>Expenses</h3>
-                    <p>£0.00</p>
+                    <p>£{{ "%.2f" |format(expenses|sum(attribute="amount")) }}</p>
                 </div>
             
                 <div class="card">

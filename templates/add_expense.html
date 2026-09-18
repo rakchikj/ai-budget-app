@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expenses </title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css')}}">
+
+</head>
+<body>
+
+     <div class = "container">
+    <nav class=" sidebar" > 
+    <h2>BudgetFlow 🤍</h2>
+        <ul>
+            <li><a href= "/">Dashboard</a></li>
+            <li><a href="/add-income">Add Income</a></li>
+            <li><a href= "/add-expense">Add Expenses</a></li>
+            <li><a href= "/">Transactions</a></li>
+            <li><a href= "/">Budgets</a></li>
+            <li><a href= "#">Savings</a></li>
+            <li><a href= "#">Ai chat</a></li>
+            <li><a href= "#">Settings</a></li>
+        </ul>
+
+     </nav>
+    <main class="main-content">
+        <header class="navbar">
+            <h1>Add Expenses</h1>
+        </header>
+        <section class = "dashboard">
+            <h2> Record your Expenses </h2>
+            <p> Record Money you have spent</p>
+            <form method="POST" action="/add-expense" class="income-form">
+                <label for="amount">Amount (£)</label>
+                <input type="number" id ="amount" name="amount" step="0.01" placeholder="0.00" required>
+                <label for="category">Category </label>
+                <input type="text" id ="category" name="category"   required>
+                <label for="date">Date</label>
+                <input type="date" id ="date" name="date"  required>
+                <label for="notes">Notes </label>
+                <textarea id="notes" name="notes" placeholder="Optional"></textarea>      
+                <button type="submit">Add Expense</button>          
+
+
+
+            </form>
+        </section>
+    </main>
+    </div>
+    <script src="{{ url_for('static' , filename='js/script.js') }}" ></script>
+</body>
+</html>
